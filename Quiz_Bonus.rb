@@ -1,29 +1,13 @@
-# Les étapes de votre jeu seront:
-# Souhaiter la bienvenue dans votre jeu.
-# Demander à l'utilisateur d'entrer son nom et le saluer.
-# Faire choisir le niveau de difficulté désiré.
-# Jouer la partie.
-# Demander si le joueur veut jouer à nouveau ou arrêter le programme. Si il veut rejouer, on retourne à l'étape 3.
-# Si le joueur quitte le jeu, on le remercie d'avoir joué.
-# Voici également les paramètres des niveaux de difficulté:
-# Très facile: Chiffre de 1 à 10, essais illimités
-# Facile: 1 à 10, 5 essais
-# Moyen: 1 à 100, 6 essais
-# Difficile: 1 à 500, 8 essais
-# Très difficile: 1 à 1000, 9 essais
-# À chaque essai du joueur, le jeu devra nous dire si la bonne réponse est plus élevé ou moins élevé (par exemple si la réponse est 5 et que j'entre 3, le jeu devra me dire que la réponse est plus élevée).
-# Si le joueur ne trouve pas la bonne réponse avec le nombre d'essais alloués, on lui donne la réponse et on propose de rejouer ou quitter.
-
 
 puts "-------Bienvenue à Kick the chicks------"
 puts "Bonjour petit poussin, quel est ton nom?"
 name=gets.chomp
-puts "Tu t'appelles vraiment " + name + ", tes parents t'aimaient pas"
+puts "Tu t'appelles vraiment " + name + ", tes parents t'aimaient pas."
 
 
 def play()
-    insulte = ["My God, tu n'es pas le crayon le plus aiguisé de la boîte!", "Bande-toi les yeux et cours très vite dans une forêt.", "Un petit effort...", ".......... sérieux?!", "J'ai plus de couilles que toi!", "Tu vaux pas mieux que Jar Jar Binks", "T'aurais du prendre un niveau à ta hauteur, petit poussin.", "Tu te rappelles le temps ou t'étais bon?Ah non... c'est jamais arrivé.", "Iiiish Arrête là, tu te fais du mal", "Do not worry, beigne inquiet", "T'as fait combien de commotions cérébrales", "Tu as probablement été conçu à botch dans un party de bureau"]
-    puts insulte[rand(0..insulte.length)]
+    insulte = ["My God, tu n'es pas le crayon le plus aiguisé de la boîte!","Les gens comme toi n'y sont pour rien." "Bande-toi les yeux et cours très vite dans une forêt.", "Un petit effort...", ".......... sérieux?!", "J'ai plus de couilles que toi!", "Tu vaux pas mieux que Jar Jar Binks.", "T'aurais du prendre un niveau à ta hauteur, petit poussin.", "Tu te rappelles le temps ou t'étais bon?Ah non... c'est jamais arrivé.", "Iiiish Arrête là, tu te fais du mal.", "Do not worry, beigne inquiet!", "T'as fait combien de commotions cérébrales.", "Tu as probablement été conçu à botch dans un party de bureau."]
+    puts "-----------------------------------------------------------------------------"
     puts "Es-tu prêt à me montrer que tu es un homme... à moins que tu sois un petit poussin?"
     puts "Choisis ton niveau de difficulté : 1- peeps? 2- poussin? 3- Homme? 4- Jean-Claude Van Dam? ou 5- Chuck Norris?"
     puts "Inscris le chiffre correspondant au niveau choisi."
@@ -77,13 +61,13 @@ def play()
             end
             
         end
-        
-            
-    end
         if i == uptry
         puts "Tes chances sont écoulées."
-        puts "J'avais choisi #{secret}, épais!"
-        end    
+        puts "J'avais choisi #{secret}"
+        end 
+        
+     end
+           
     
 
 end
@@ -93,7 +77,7 @@ play()
     
     
     
-puts "Veux tu essayer à nouveau? Choisi entre oui ou non"
+puts name + " ,veux tu essayer à nouveau? Choisi entre oui ou non"
 again = gets.chomp
 if again == "oui"
     play()
